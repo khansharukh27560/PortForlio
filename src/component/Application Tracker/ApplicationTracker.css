@@ -1,0 +1,96 @@
+.applicationTracker{
+
+}
+.trackerTitle{
+    text-align: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(135deg,red,yellow,pink,green);
+}
+.appliedBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    /* height: 100vh; */
+}
+.showItemBox{
+    border: 1px solid green;
+    border-radius: 15px;
+}
+.showItemDiv .showItemInnerDiv{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    line-height: 1;
+}
+.showItemInnerDiv p{
+    line-height: 1;
+    height: fit-content;
+}
+.trackerTitle{
+    text-align: center;
+}
+.popupForm {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px white;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .popup-overlay {
+    background: rgba(0, 0, 0, 0.5) !important;
+    z-index: 1000 !important;
+  }
+  
+  .popup-content {
+    z-index: 1001 !important;
+    border-radius: 12px;
+  }
+  
+  .formWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+  }
+  .formGroup{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .formGroup label {
+    margin-bottom: 6px;
+    font-weight: 500;
+    /* color: white; */
+  }
+  
+  .formGroup input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .submitBtn {
+    background-color: #10b981;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .submitBtn:hover {
+    background-color: #059669;
+  }
+  
