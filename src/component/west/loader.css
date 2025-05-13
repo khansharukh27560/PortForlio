@@ -1,0 +1,31 @@
+.maindivWest{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loader {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    position: relative;
+    /* border: 10px solid black; */
+}
+
+.loader .inner {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 10px solid black; /* sab border transparent */
+    border-top: 10px dashed transparent; /* sirf top border visible */
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

@@ -6,6 +6,7 @@ import QuestionAndAnswer from "./question&ans/QuestionAndAnswer";
 import Counter from "./CountDown/Counter";
 import JobApplicationTracker from "./Application Tracker/JobApplicationTracker";
 import ScrollToTopButton from "./ScrollToTopButton";
+import MouseTracker from "./MouseTracker.jsx/MouseTracker";
 
 
 const Home = ()=>{  
@@ -33,6 +34,15 @@ const Home = ()=>{
         </div>
         <div style={{border:'5px solid black',padding:'25px',margin:'15px',borderRadius:'15px',height:'fit-content'}}>
         <JobApplicationTracker/>
+        </div>
+         <div style={{border:'5px solid black',padding:'25px',margin:'15px',borderRadius:'15px',height:'fit-content'}}>
+        <MouseTracker
+        render={({ x, y }) => (
+          <small>
+            Mouse position: X = {x}, Y = {y}
+          </small>
+        )}
+      />
         </div>
         
        

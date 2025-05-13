@@ -43,8 +43,6 @@ export default function WeatherData() {
     return <div style={{ padding: '20px', textAlign: 'center' }}>Loading weather data...</div>;
   }
 
-
-
   if (error) {
     return <div style={{ padding: '20px', textAlign: 'center', color: 'red' }}>Error: {error}</div>;
   }
