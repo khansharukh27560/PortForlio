@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/PortForlio/static/css/main.18b37149.css",
-    "main.js": "/PortForlio/static/js/main.626726e4.js",
+    "main.css": "/PortForlio/static/css/main.72dcd867.css",
+    "main.js": "/PortForlio/static/js/main.b1d7d99f.js",
     "static/js/453.68693753.chunk.js": "/PortForlio/static/js/453.68693753.chunk.js",
+    "static/media/resume_pdf.pdf": "/PortForlio/static/media/resume_pdf.b6f9963ac697f49857f6.pdf",
     "index.html": "/PortForlio/index.html",
-    "main.18b37149.css.map": "/PortForlio/static/css/main.18b37149.css.map",
-    "main.626726e4.js.map": "/PortForlio/static/js/main.626726e4.js.map",
+    "main.72dcd867.css.map": "/PortForlio/static/css/main.72dcd867.css.map",
+    "main.b1d7d99f.js.map": "/PortForlio/static/js/main.b1d7d99f.js.map",
     "453.68693753.chunk.js.map": "/PortForlio/static/js/453.68693753.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.18b37149.css",
-    "static/js/main.626726e4.js"
+    "static/css/main.72dcd867.css",
+    "static/js/main.b1d7d99f.js"
   ]
 }
