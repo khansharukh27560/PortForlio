@@ -1,0 +1,90 @@
+/* Navbar.css */
+
+.cart-icon-button {
+  position: relative;
+  width: fit-content;
+}
+
+.cart-button {
+  position: relative;
+}
+/* Optional reset for popup wrapper if needed */
+/* .popup-content {
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+} */
+
+
+.cart-badge {
+  position: absolute;
+  left: 60%;
+  top: 15%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid black;
+  padding: 1px;
+  background-color: white;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.cart-popup {
+  padding: 20px;
+  width: 90%;
+  /* max-width: 320px; */
+  background-color: aliceblue;
+  overflow-y: auto;
+  border-radius: 25px;
+}
+
+.cart-popup h5 {
+  margin-bottom: 10px;
+}
+
+.cart-popup .btn-close {
+  margin-top: 10px;
+}
+
+/* ============================
+   ✅ Media Queries
+============================ */
+
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+  .cart-badge {
+    left: 55%;
+    top: 12%;
+    font-size: 0.7rem;
+    width: 18px;
+    height: 18px;
+  }
+
+  .cart-popup {
+    max-width: 90vw;
+    padding: 15px;
+  }
+}
+
+/* For phones and small screens */
+@media (max-width: 480px) {
+  .cart-badge {
+    left: 50%;
+    top: 10%;
+    font-size: 0.65rem;
+    width: 16px;
+    height: 16px;
+  }
+
+  .cart-popup {
+    max-width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+  }
+
+  .cart-popup h5 {
+    font-size: 1rem;
+  }
+}

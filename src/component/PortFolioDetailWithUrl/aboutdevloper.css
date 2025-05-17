@@ -1,0 +1,191 @@
+ body {
+      margin: 0;
+      background-color: #0a192f;
+      color: #8892b0;
+      font-family: "Inter", sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .app {
+      max-width: 1280px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 1.5rem 1.5rem;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1.5rem;
+    }
+
+    .logo {
+      border: 1px solid #64ffda;
+      border-radius: 0.375rem;
+      padding: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    .logo-icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      stroke: #64ffda;
+    }
+
+    .nav {
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      .nav {
+        display: flex;
+        gap: 2rem;
+        font-family: "Fira Mono", monospace;
+        font-size: 0.875rem;
+        color: #64ffda;
+        align-items: center;
+      }
+    }
+
+    .nav-link {
+      text-decoration: none;
+      padding: 0.125rem 0.25rem;
+      border-radius: 0.25rem;
+      transition: background-color 0.2s, color 0.2s;
+      color: #64ffda;
+      font-family: "Fira Mono", monospace;
+    }
+
+    .nav-link:hover {
+      background-color: #64ffda;
+      color: #0a192f;
+    }
+
+    .resume-button {
+      border: 1px solid #64ffda;
+      border-radius: 0.375rem;
+      padding: 0.25rem 0.75rem;
+      font-family: "Fira Mono", monospace;
+      font-size: 0.75rem;
+      color: #64ffda;
+      text-decoration: none;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .resume-button:hover {
+      background-color: #64ffda;
+      color: #0a192f;
+    }
+
+    .main-content {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      padding-bottom: 3rem;
+    }
+
+    section {
+      max-width: 42rem;
+    }
+
+    .intro-text {
+      font-family: "Fira Mono", monospace;
+      font-size: 0.875rem;
+      color: #64ffda;
+      margin-bottom: 0.75rem;
+    }
+
+    .name {
+      font-weight: 900;
+      font-size: 2.25rem;
+      line-height: 1.1;
+      color: #ccd6f6;
+      margin: 0 0 0.5rem 0;
+    }
+
+    @media (min-width: 640px) {
+      .name {
+        font-size: 3rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .name {
+        font-size: 3.75rem;
+      }
+    }
+
+    .dot {
+      color: #8892b0;
+    }
+
+    .subtitle {
+      font-weight: 900;
+      font-size: 1.875rem;
+      line-height: 1.1;
+      color: #8892b0;
+      margin-bottom: 1.5rem;
+    }
+
+    @media (min-width: 640px) {
+      .subtitle {
+        font-size: 2.25rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .subtitle {
+        font-size: 3rem;
+      }
+    }
+
+    .description {
+      font-size: 0.875rem;
+      max-width: 36rem;
+      margin-bottom: 2rem;
+      color: #f9fafc;
+    }
+
+    @media (min-width: 640px) {
+      .description {
+        font-size: 1rem;
+      }
+    }
+
+    .highlight-link {
+      color: #64ffda;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .highlight-link:hover {
+      text-decoration: underline;
+    }
+
+    .course-button {
+      display: inline-block;
+      border: 1px solid #64ffda;
+      border-radius: 0.375rem;
+      padding: 0.5rem 1rem;
+      font-family: "Fira Mono", monospace;
+      font-size: 0.75rem;
+      color: #64ffda;
+      text-decoration: none;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .course-button:hover {
+      background-color: #64ffda;
+      color: #0a192f;
+    }
+  

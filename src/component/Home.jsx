@@ -7,47 +7,23 @@ import Counter from "./CountDown/Counter";
 import JobApplicationTracker from "./Application Tracker/JobApplicationTracker";
 import ScrollToTopButton from "./ScrollToTopButton";
 import MouseTracker from "./MouseTracker.jsx/MouseTracker";
+import PortFolioDetail from "./PortFolioDetailWithUrl/PortFolioDetail";
 
 
-const Home = ()=>{  
 
-  return(
+const Home = () => {
+
+  return (
     <>
-      
-      <ScrollToTopButton/>
-      <div>
-        <div style={{border:'5px solid black',padding:'25px',margin:'15px',borderRadius:'15px'}}>
-        <TodoList/>
+      <MouseTracker render={(mousePosition) => (
+        <div>
+          <p style={{color:'white'}}>X: {mousePosition.x}</p>
+          <p style={{color:'white'}}>Y: {mousePosition.y}</p>
         </div>
-        <hr />
-        <div style={{border:'5px solid black',padding:'25px',margin:'15px',borderRadius:'15px'}}>
-        <ExpencessTracker/>
-        </div>
-        <div style={{border:'5px solid black',padding:'25px',margin:'15px',borderRadius:'15px'}}>
-        <WeatherData/>
-        </div>
-        {/* <div style={{border:'5px solid black',padding:'25px',margin:'15px',borderRadius:'15px'}}>
-        <QuestionAndAnswer/>
-        </div> */}
-        <div style={{border:'5px solid black',padding:'25px',margin:'15px',borderRadius:'15px'}}>
-        <Counter/>
-        </div>
-        <div style={{border:'5px solid black',padding:'25px',margin:'15px',borderRadius:'15px',height:'fit-content'}}>
-        <JobApplicationTracker/>
-        </div>
-         <div style={{border:'5px solid black',padding:'25px',margin:'15px',borderRadius:'15px',height:'fit-content'}}>
-        <MouseTracker
-        render={({ x, y }) => (
-          <small>
-            Mouse position: X = {x}, Y = {y}
-          </small>
-        )}
-      />
-        </div>
-        
-       
-       
-        
+      )}/>
+      <ScrollToTopButton />
+      <div style={{ border: '5px solid black', padding: '25px', margin: '15px', borderRadius: '15px', height: 'fit-content' }}>
+        <PortFolioDetail />
       </div>
     </>
   )

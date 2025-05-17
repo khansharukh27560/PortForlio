@@ -11,3 +11,9 @@ export function todoItem(data){
         payload:data
     }
 }
+export function AddCardItem(data){
+    return{
+        type:"Add_Card_Item",
+        payload:data
+    }
+}

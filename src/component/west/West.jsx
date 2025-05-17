@@ -1,65 +1,50 @@
-import React, { useEffect, useState } from "react";
-import useDebounce from "../function/DebounceFunction/Debounce";
+import { useEffect, useState } from "react"
 
-const fakeData = [
-  "React",
-  "Redux",
-  "JavaScript",
-  "TypeScript",
-  "Node.js",
-  "Express",
-  "MongoDB",
-  "Next.js",
-  "Tailwind",
-  "Bootstrap",
-];
-
-function DebouncedSearch() {
-  const [query, setQuery] = useState("");
-  const [results, setResults] = useState([]);
-  const [loading, setLoading] = useState(false);
-
-  const debouncedQuery = useDebounce(query, 500); // 500ms debounce
-
-  useEffect(() => {
-    if (debouncedQuery) {
-      setLoading(true);
-
-      // Simulate API call
-      setTimeout(() => {
-        const filtered = fakeData.filter((item) =>
-          item.toLowerCase().includes(debouncedQuery.toLowerCase())
-        );
-        setResults(filtered);
-        setLoading(false);
-      }, 800); // Fake API delay
-    } else {
-      setResults([]);
+export default function West() {
+  const [searchInput,setSearchInput] = useState('')
+  const [apiData, setApiData] = useState([])
+  const [error, setError] = useState(true)
+  const [filterData,setFilterData] = useState([ ])
+  useEffect(()=>{
+    const  fetchFakeData = async() => {
+    try {
+      const response = await fetch('https://fakestoreapi.com/products')
+      const data = await response.json()
+      if (data) {
+        setApiData(data)
+        setFilterData(data)
+      }
+    } catch (err) {
+      setError(err)
     }
-  }, [debouncedQuery]);
-  console.log('debouncedQuery:-',  debouncedQuery)
+  }
+    fetchFakeData()
+  },[])
+ useEffect(()=>{
+   const filterData = apiData.filter((item)=>
+    item.title.toLowerCase().includes(searchInput.toLowerCase())
+    )
+ setFilterData(filterData)
+ },[])
   return (
-    <div style={{ padding: "30px", fontFamily: "Arial" }}>
-      <h2>🔍 Debounced Search</h2>
-      <input
-        type="text"
-        placeholder="Search tech stack..."
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        style={{ padding: "10px", width: "300px", fontSize: "16px" }}
-      />
-
-      {loading && <p>Loading...</p>}
-
-      <ul>
-        {results.length > 0 ? (
-          results.map((item, i) => <li key={i}>{item}</li>)
-        ) : (
-          !loading && query && <li>No result found</li>
-        )}
-      </ul>
+    <div className="maindiv" style={{width:'100%',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
+      <input type="text" style={{width:'50%',border:'1px solid black',borderRadius:'5px'}} 
+      placeholder="Search here with title" onChange={(e)=>setSearchInput(e.target.value)} />
+    <div className="maindivWest" style={{display:'flex',justifyContent:'space-between',flexWrap:'wrap',gap:'10px',padding:'10px'}}>
+      {filterData ? (filterData.map((item) => (
+        
+          <div class="card" style={{width:"18rem"}}>
+            <img src={item.image} class="card-img-top" alt={item.title} style={{height:"200px"}}/>
+            <div class="card-body">
+              <h5 class="card-title">{item.title}</h5>
+              <p class="card-text">{item.description.length>0 ?item.description.slice(0,100):item.description}</p>
+              <p class="card-text">{item.category}</p>
+              <p class="card-text">{item.price}</p>
+              <p class="card-text">{item.rating.rate} {item.rating.count}</p>
+            </div>
+          </div>
+      ))):(<div>{error}</div>)}
     </div>
-  );
+    </div>
+  )
 }
-
-export default DebouncedSearch;
